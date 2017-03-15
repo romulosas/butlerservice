@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('socket', 'SocketController@index');
+Route::post('sendmessage', 'SocketController@sendMessage')->name('sendmessage');
+Route::get('writemessage', 'SocketController@writeMessage')->name('writemessage');
